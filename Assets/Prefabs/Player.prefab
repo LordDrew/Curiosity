@@ -93,7 +93,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed506196767737140a08686375016a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
   speed: 10
+  jumpHeight: 10
 --- !u!1 &6055454065621441343
 GameObject:
   m_ObjectHideFlags: 0

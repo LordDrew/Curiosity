@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     public float speed = 10f;
     public float jumpHeight = 1f;
+    public int typeKey = 0;
+    public SpriteRenderer spriteRenderer;
 
     bool canJump = true;
     float groundRaycastDistance = 0.52f;

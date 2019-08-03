@@ -23,7 +23,8 @@ public class ItemScript : MonoBehaviour
         {
             Debug.Log("TRIGIRRED!!!! (Player)");
             Destroy(gameObject);
-            //collision.gameObject.getItem();
+            collision.gameObject.GetComponent<PlayerController>().typeKey = 1;
+            collision.gameObject.GetComponent<PlayerController>().spriteRenderer.color = new Color(0, 30, 255);
         }
     }
 }

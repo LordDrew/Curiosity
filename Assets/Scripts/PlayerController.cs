@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 10f;
     public float jumpHeight = 1f;
 
-    float groundRaycastDistance = 0.6f;
+    float groundRaycastDistance = 0.52f;
     Vector3 velocity = Vector3.zero;
 
     new Rigidbody2D rigidbody;
@@ -39,12 +39,12 @@ public class PlayerController : MonoBehaviour
         {
             return true;
         }
-        hit = Physics2D.Raycast(transform.position + Vector3.left * 0.45f, direction, groundRaycastDistance, groundLayer);
+        hit = Physics2D.Raycast(transform.position + Vector3.left * 0.5f, direction, groundRaycastDistance, groundLayer);
         if (hit.collider != null)
         {
             return true;
         }
-        hit = Physics2D.Raycast(transform.position - Vector3.left * 0.45f, direction, groundRaycastDistance, groundLayer);
+        hit = Physics2D.Raycast(transform.position - Vector3.left * 0.5f, direction, groundRaycastDistance, groundLayer);
         if (hit.collider != null)
         {
             return true;
@@ -55,8 +55,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Debug.DrawRay(transform.position + Vector3.left * 0.45f, Vector2.down*groundRaycastDistance, Color.green);
+        Debug.DrawRay(transform.position + Vector3.left * 0.5f, Vector2.down*groundRaycastDistance, Color.green);
         Debug.DrawRay(transform.position, Vector2.down * groundRaycastDistance, Color.green);
-        Debug.DrawRay(transform.position - Vector3.left * 0.45f, Vector2.down * groundRaycastDistance, Color.green);
+        Debug.DrawRay(transform.position - Vector3.left * 0.5f, Vector2.down * groundRaycastDistance, Color.green);
     }
 }

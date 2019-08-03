@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 10f;
     public float jumpHeight = 1f;
 
+    bool canJump = true;
     float groundRaycastDistance = 0.52f;
     Vector3 velocity = Vector3.zero;
 
@@ -26,8 +27,18 @@ public class PlayerController : MonoBehaviour
         // And then smoothing it out and applying it to the character
         rigidbody.velocity = Vector3.SmoothDamp(rigidbody.velocity, targetVelocity, ref velocity, 0.05f);
 
-        if (Input.GetButton("Jump") && IsGrounded())
+        if (canJump && Input.GetButton("Jump") && IsGrounded())
+        {
             rigidbody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+            StartCoroutine(TemporaryDisableJump());
+        }
+    }
+
+    IEnumerator TemporaryDisableJump()
+    {
+        canJump = false;
+        yield return new WaitForSeconds(0.1f);
+        canJump = true;
     }
 
     bool IsGrounded()

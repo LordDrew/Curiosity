@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4076812715360607180}
   - component: {fileID: 6966468951910350289}
+  - component: {fileID: -7995414503177205113}
   m_Layer: 0
   m_Name: Destructable
   m_TagString: Untagged
@@ -58,6 +59,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-7995414503177205113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076812715360607181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14305f92a9ded8c40b0c1085ad90f60b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 4076812716841083704}
 --- !u!1 &4076812716841083707
 GameObject:
   m_ObjectHideFlags: 0
@@ -69,7 +83,7 @@ GameObject:
   - component: {fileID: 4076812716841083706}
   - component: {fileID: 4076812716841083704}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Destructable_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

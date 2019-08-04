@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ItemScript : MonoBehaviour
 {
+    public SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +23,9 @@ public class ItemScript : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             Debug.Log("TRIGIRRED!!!! (Player)");
+            Debug.Log(collision.gameObject.GetComponent<PlayerController>().spriteRenderer.color.ToString());
+            collision.gameObject.GetComponent<PlayerController>().spriteRenderer.color = gameObject.GetComponent<ItemScript>().spriteRenderer.color;
             Destroy(gameObject);
-            collision.gameObject.GetComponent<PlayerController>().typeKey = 1;
-            collision.gameObject.GetComponent<PlayerController>().spriteRenderer.color = new Color(0, 30, 255);
         }
     }
 }

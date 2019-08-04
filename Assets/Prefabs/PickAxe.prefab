@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 478229196130925322}
   - component: {fileID: 478229196130925327}
   m_Layer: 0
-  m_Name: RobotImage
+  m_Name: Item_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 478229196452934649}
   - component: {fileID: 478229196452934655}
   - component: {fileID: 478229196452934648}
-  - component: {fileID: 8544159309086659492}
+  - component: {fileID: -7775716154965344684}
   m_Layer: 0
   m_Name: PickAxe
   m_TagString: Untagged
@@ -161,7 +161,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8544159309086659492
+--- !u!114 &-7775716154965344684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 478229196452934650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed506196767737140a08686375016a0e, type: 3}
+  m_Script: {fileID: 11500000, guid: 10f74fcdb3dbd5644b23a2a724992fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  spriteRenderer: {fileID: 478229196130925327}
